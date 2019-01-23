@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+</html>
+<head>
+</script>
+    <title></title>
+</head>
+<body>
+<ol id="todo-list">
+</ol>
+<script>
+function tasklist(){
+var tasks = ['Buy lemonade', 'Make toasts', 'Repair car', 'Play games', 'Pet a cat'];
+function createLi(value){
+var list = document.getElementById('todo-list');
+var li = document.createElement('li');
+li.innerText = value;
+list.appendChild(li);
+}
+for(var i = 0; i < tasks.length; i++){
+createLi(tasks[i]);
+}
+}
+tasklist();
+	</script>
+</script>
+</body>
+</html>
