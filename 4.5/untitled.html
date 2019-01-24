@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+</div>
+<button id="btn">Click for add task</button>
+<ul id="tasks">
+</ul>   
+</div>
+<script>
+function body(){
+var button = document.getElementById('btn');
+var list = document.getElementById('tasks');
+function createLi(value){
+var li = document.createElement('li');
+list.innerText = value;
+ul.appendChild(li);
+}
+function poll(){
+var text = prompt("Что надо сделать?");
+if(text.length > 0){
+createLi(text);
+}
+}
+button.addEventListener('click',poll);
+}
+body();
+</script>
+</body>
+</html>
