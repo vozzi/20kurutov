@@ -6,23 +6,24 @@
 <body>
 <div id="cart-items">
 	<div class="item">Milk 1l.<span class="qty">x 2</span></div>
-	<div class="item2">Cola 1.5l. <span class="qty">x 1</span></div>
+	<div id="item">Cola 1.5l. <span class="qty">x 1</span></div>
 	<div class="item">Bread<span class="qty">x 2</span></div>
 	<div class="item">Cheese<span class="qty">x 1</span></div>
 	<div id="item1">Chocolate bar<span class="qty">x 3</span></div>
+	<input id='btn' type="submit" value='REMOVE THAT!!!'></input>
 </div>
 <script>
-var list = document.getElementsByClassName("item2");
- for(var i = list.length - 1; 0 <= i; i--)
- if(list[i] && list[i].parentElement)
- list[i].parentElement.removeChild(list[i]);
+var btn = document.getElementById('btn');
+btn.onclick = function () {
+    document.getElementById('item').remove();
+    this.remove();
+};
 </script>
 <script>
-	var a = document.createElement("div");
+		var a = document.createElement("div");
 	a.setAttribute("span", "div");
 	var a_content = document.createTextNode("Canned Fish x4");
 	a.appendChild(a_content);
-
 	var b = document.getElementById("item1", "qty");
 	var parentDiv = b.parentNode;
 	parentDiv.replaceChild(a, b);
